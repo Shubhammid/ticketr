@@ -18,6 +18,7 @@ import { SignInButton, useUser } from "@clerk/nextjs";
 import { useStorageUrl } from "@/lib/utils";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import JoinQueue from "@/components/JoinQueue";
 
 const EventPage = () => {
   const { user } = useUser();

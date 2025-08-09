@@ -40,6 +40,23 @@ export const getQueuePosition = query({
   },
 });
 
+export const expireOffer = internalMutation({
+  args: {
+    waitingListId: v.id("waitingList"),
+    eventId: v.id("events"),
+  },
+  handler: async (ctx, { waitingListId, eventId }) => {
+    const offer = await ctx.db.get(waitingListId);
+    if (!offer || offer.status !== WAITING_LIST_STATUS.OFFERED) return;
+
+    await ctx.db.patch(waitingListId, {
+      status: WAITING_LIST_STATUS.EXPIRED,
+    });
+
+    await processQueue(ctx, { eventId });
+  },
+});
+
 export const releaseTicket = mutation({
   args: {
     eventId: v.id("events"),
