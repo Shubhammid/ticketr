@@ -8,6 +8,7 @@ import { api } from "@/convex/_generated/api";
 import { useQuery } from "convex/react";
 import { Ticket } from "lucide-react";
 import ReleaseTicket from "./ReleaseTicket";
+import { createStripeCheckoutSession } from "@/app/actions/createStripeCheckoutSession";
 
 const PurchaseTicket = ({ eventId }: { eventId: Id<"events"> }) => {
   const router = useRouter();
@@ -50,13 +51,31 @@ const PurchaseTicket = ({ eventId }: { eventId: Id<"events"> }) => {
     return () => clearInterval(interval);
   }, [offerExpiresAt, isExpired]);
 
-  const handlePurchase = async () => {};
+  const handlePurchase = async () => {
+    if (!user) return;
+
+    try {
+      setIsLoading(true);
+      const { sessionUrl } = await createStripeCheckoutSession({
+        eventId,
+      });
+
+      if (sessionUrl) {
+        router.push(sessionUrl);
+      }
+    } catch (error) {
+      console.error("Error creating checkout session:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   if (!user || !queuePosition || queuePosition.status !== "offered") {
     return null;
   }
 
-  return  <div className="bg-white p-6 rounded-xl shadow-lg border border-amber-200">
+  return (
+    <div className="bg-white p-6 rounded-xl shadow-lg border border-amber-200">
       <div className="space-y-4">
         <div className="bg-white rounded-lg p-6 border border-gray-200">
           <div className="flex flex-col gap-4">
@@ -95,7 +114,8 @@ const PurchaseTicket = ({ eventId }: { eventId: Id<"events"> }) => {
           <ReleaseTicket eventId={eventId} waitingListId={queuePosition._id} />
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default PurchaseTicket;
