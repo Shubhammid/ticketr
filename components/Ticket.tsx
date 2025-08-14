@@ -30,7 +30,6 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
     <div
       className={`bg-white rounded-xl overflow-hidden shadow-xl border ${ticket.event.is_cancelled ? "border-red-200" : "border-gray-100"}`}
     >
-      {/* Event Header with Image */}
       <div className="relative">
         {imageUrl && (
           <div className="relative w-full aspect-[21/9] ">
@@ -58,10 +57,8 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
         </div>
       </div>
 
-      {/* Ticket Content */}
       <div className="p-6">
         <div className="grid grid-cols-2 gap-6">
-          {/* Left Column - Event Details */}
           <div className="space-y-4">
             <div className="flex items-center text-gray-600">
               <CalendarDays
@@ -117,7 +114,6 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
             </div>
           </div>
 
-          {/* Right Column - QR Code */}
           <div className="flex flex-col items-center justify-center border-l border-gray-200 pl-6">
             <div
               className={`bg-gray-100 p-4 rounded-lg ${ticket.event.is_cancelled ? "opacity-50" : ""}`}
@@ -130,7 +126,6 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
           </div>
         </div>
 
-        {/* Additional Information */}
         <div className="mt-6 pt-6 border-t border-gray-200">
           <h3 className="text-sm font-medium text-gray-900 mb-2">
             Important Information
@@ -150,7 +145,6 @@ export default function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
         </div>
       </div>
 
-      {/* Ticket Footer */}
       <div
         className={`${ticket.event.is_cancelled ? "bg-red-50" : "bg-gray-50"} px-6 py-4 flex justify-between items-center`}
       >

@@ -36,7 +36,6 @@ export default function Refresh() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="max-w-md w-full">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white">
             <h2 className="text-2xl font-bold mb-2">Account Setup</h2>
             <p className="text-blue-100">
@@ -44,7 +43,6 @@ export default function Refresh() {
             </p>
           </div>
 
-          {/* Content */}
           <div className="p-6">
             {error ? (
               <div className="bg-red-50 border border-red-100 rounded-lg p-4 flex items-start gap-3">

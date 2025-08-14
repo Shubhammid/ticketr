@@ -97,7 +97,6 @@ export default function EventForm({ mode, initialData }: EventFormProps) {
           imageStorageId = await handleImageUpload(selectedImage);
         }
 
-     
         if (mode === "edit" && initialData?.imageStorageId) {
           if (removedCurrentImage || selectedImage) {
             

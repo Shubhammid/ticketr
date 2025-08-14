@@ -31,7 +31,6 @@ export default function SearchPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Search Results Header */}
         <div className="flex items-center gap-3 mb-8">
           <Search className="w-6 h-6 text-gray-400" />
           <div>
@@ -43,8 +42,6 @@ export default function SearchPage() {
             </p>
           </div>
         </div>
-
-        {/* No Results State */}
         {searchResults.length === 0 && (
           <div className="text-center py-12 bg-white rounded-xl shadow-sm">
             <Search className="w-12 h-12 text-gray-300 mx-auto mb-4" />
@@ -56,8 +53,6 @@ export default function SearchPage() {
             </p>
           </div>
         )}
-
-        {/* Upcoming Events */}
         {upcomingEvents.length > 0 && (
           <div className="mb-12">
             <h2 className="text-xl font-semibold text-gray-900 mb-6">
@@ -70,8 +65,6 @@ export default function SearchPage() {
             </div>
           </div>
         )}
-
-        {/* Past Events */}
         {pastEvents.length > 0 && (
           <div>
             <h2 className="text-xl font-semibold text-gray-900 mb-6">

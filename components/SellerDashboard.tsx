@@ -166,7 +166,6 @@ const SellerDashboard = () => {
                   </div>
                 </div>
 
-                {/* Payments Status Card */}
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h3 className="text-sm font-medium text-gray-500">
                     Payment Capability
@@ -252,7 +251,7 @@ const SellerDashboard = () => {
                       </ul>
                     </div>
                   )}
-                  {/* Only show Add Information button if there are requirements */}
+  
                   {!accountLinkCreatePending && (
                     <button
                       onClick={async () => {
@@ -309,7 +308,6 @@ const SellerDashboard = () => {
             </div>
           )}
 
-          {/* Loading States */}
           {accountCreatePending && (
             <div className="text-center py-4 text-gray-600">
               Creating your seller account...

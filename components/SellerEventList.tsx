@@ -31,7 +31,6 @@ export default function SellerEventList() {
 
   return (
     <div className="mx-auto space-y-8">
-      {/* Upcoming Events */}
       <div>
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           Upcoming Events
@@ -46,7 +45,6 @@ export default function SellerEventList() {
         </div>
       </div>
 
-      {/* Past Events */}
       {pastEvents.length > 0 && (
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Past Events</h2>
@@ -77,7 +75,6 @@ function SellerEventCard({
     >
       <div className="p-6">
         <div className="flex items-start gap-6">
-          {/* Event Image */}
           {imageUrl && (
             <div className="relative w-40 h-40 rounded-lg overflow-hidden shrink-0">
               <Image
@@ -89,7 +86,6 @@ function SellerEventCard({
             </div>
           )}
 
-          {/* Event Details */}
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-4">
               <div>
