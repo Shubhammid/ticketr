@@ -95,14 +95,6 @@ export const checkAvailability = query({
 export const joinWaitingList = mutation({
   args: { eventId: v.id("events"), userId: v.string() },
   handler: async (ctx, { eventId, userId }) => {
-    // const status = await rateLimiter.limit(ctx, "queueJoin", { key: userId });
-    // if (!status.ok) {
-    //   throw new ConvexError(
-    //     `You've joined the waiting list too many times. Please wait ${Math.ceil(
-    //       status.retryAfter / (60 * 1000)
-    //     )} minutes before trying again.`
-    //   );
-    // }
     const existingEntry = await ctx.db
       .query("waitingList")
       .withIndex("by_user_event", (q) =>
