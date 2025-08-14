@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 import { useStorageUrl } from "@/lib/utils";
 import Image from "next/image";
-import CancelEventButton from "./CancelEventButton";
+//import CancelEventButton from "./CancelEventButton";
 import { Doc } from "@/convex/_generated/dataModel";
 import { Metrics } from "@/convex/events";
 
@@ -116,7 +116,7 @@ function SellerEventCard({
                       <Edit className="w-4 h-4" />
                       Edit
                     </Link>
-                    <CancelEventButton eventId={event._id} />
+                    {/* <CancelEventButton eventId={event._id} /> */}
                   </>
                 )}
               </div>
