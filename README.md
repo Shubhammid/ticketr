@@ -44,7 +44,7 @@ The UI is designed with **shadcn/ui** and **Tailwind CSS**, and the entire proje
 - **Styling**: Tailwind CSS + [shadcn/ui](https://ui.shadcn.com/)
 - **Auth**: [Clerk](https://clerk.com/) with MFA
 - **Payments**: [Stripe Connect](https://stripe.com/connect)
-- **Database**: (Prisma + PostgreSQL / Convex — choose your setup)
+- **Database**: Convex(https://www.convex.dev/)
 - **Deployment**: [Vercel](https://vercel.com/)
 
 ---
