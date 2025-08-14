@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎟 Ticketr — Ticketing Marketplace SaaS (Next.js 15)
 
-## Getting Started
+**Ticketr** is a full-stack **Ticketing Marketplace SaaS** built from scratch with **Next.js 15**.  
+It features a **real-time ticket purchase queue**, **rate limiting**, a powerful **seller dashboard**, **secure payments with Stripe Connect**, and **Clerk authentication** (including MFA).  
+The UI is designed with **shadcn/ui** and **Tailwind CSS**, and the entire project is written in **TypeScript**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Real-Time Queue System**  
+  Smart queue with live position updates during ticket booking.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Rate Limiting**  
+  Prevents abuse by limiting the number of people in the purchase queue.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Seller Dashboard**  
+  Manage events, tickets, refunds, and more.
 
-## Learn More
+- **Complete Event CRUD**  
+  Create, update, delete events, with automatic ticket refunds if canceled.
 
-To learn more about Next.js, take a look at the following resources:
+- **Secure Payments with Stripe Connect**  
+  Handles ticket sales, payouts, platform fees, and refunds.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Clerk Authentication + MFA**  
+  Secure login with email/password, social auth, and Multi-Factor Authentication.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Beautiful UI/UX**  
+  Built using **shadcn/ui** components and **Tailwind CSS**.
 
-## Deploy on Vercel
+- **TypeScript Everywhere**  
+  Reduces bugs and improves maintainability.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Deployment Ready**  
+  Optimized for deployment on **Vercel**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧱 Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + [shadcn/ui](https://ui.shadcn.com/)
+- **Auth**: [Clerk](https://clerk.com/) with MFA
+- **Payments**: [Stripe Connect](https://stripe.com/connect)
+- **Database**: (Prisma + PostgreSQL / Convex — choose your setup)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
