@@ -1,5 +1,7 @@
 # 🎟 Ticketr — Ticketing Marketplace SaaS (Next.js 15)
 
+![Ticketr Banner](./images/Ticketr.png)
+
 **Ticketr** is a full-stack **Ticketing Marketplace SaaS** built from scratch with **Next.js 15**.  
 It features a **real-time ticket purchase queue**, **rate limiting**, a powerful **seller dashboard**, **secure payments with Stripe Connect**, and **Clerk authentication**.  
 The UI is designed with **shadcn/ui** and **Tailwind CSS**, and the entire project is written in **TypeScript**.
