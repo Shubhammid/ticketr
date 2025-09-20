@@ -36,11 +36,11 @@ export const metadata: Metadata = {
     title: "Ticketr — Your Trusted Ticket Marketplace",
     description:
       "Discover and book tickets for concerts, sports, theater, and more. Sell your tickets instantly in a secure and trusted marketplace.",
-    url: "https://ticketr.com",
+    url: "https://ticketr-phi.vercel.app/",
     siteName: "Ticketr",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/Ticketr.png",
         width: 1200,
         height: 630,
         alt: "Ticketr - Secure Event Ticket Marketplace",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Ticketr — Buy & Sell Event Tickets",
     description:
       "Book, buy, and sell event tickets online with secure payments and instant booking confirmation.",
-    images: ["/og-image.jpg"],
+    images: ["/Ticketr.png"],
   },
 };
 
