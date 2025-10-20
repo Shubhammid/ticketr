@@ -1,4 +1,4 @@
-# 🎟 Ticketr — Ticketing Marketplace SaaS (Next.js 15)
+# 🎟 Ticketr — Ticketing Marketplace SaaS
 
 ![Ticketr Banner](./images/Ticketr.png)
 
