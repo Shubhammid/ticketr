@@ -1,4 +1,4 @@
-# 🎟 Ticketr — Ticketing Marketplace SaaS
+# 🎟 Ticketr — Ticketing Marketplace SAAS
 
 ![Ticketr Banner](./images/Ticketr.png)
 
